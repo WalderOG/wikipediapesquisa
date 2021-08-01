@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1053.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Text layoutX="310.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesquise alguma coisa no wikipedia" textAlignment="CENTER" wrappingWidth="392.408203125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <WebView fx:id="webView" layoutX="1.0" layoutY="118.0" prefHeight="478.0" prefWidth="1053.0" />
+      <Button layoutX="678.0" layoutY="63.0" mnemonicParsing="false" onAction="#loadPage" text="Pesquisar" />
+      <TextField fx:id="textField" layoutX="310.0" layoutY="63.0" onAction="#loadPage" prefHeight="25.0" prefWidth="351.0" />
+      <Button layoutX="755.0" layoutY="15.0" mnemonicParsing="false" onAction="#refreshPage" text="Atualizar" />
+      <Button layoutX="829.0" layoutY="15.0" mnemonicParsing="false" onAction="#zoomIn" prefHeight="25.0" prefWidth="31.0" text="+" />
+      <Button layoutX="870.0" layoutY="15.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="25.0" prefWidth="31.0" text="-" />
+      <Button layoutX="11.0" layoutY="15.0" mnemonicParsing="false" onAction="#displayHistory" text="Histórico" />
+      <Button layoutX="911.0" layoutY="15.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="59.0" text="Voltar" />
+      <Button layoutX="980.0" layoutY="15.0" mnemonicParsing="false" onAction="#forward" text="Avançar" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/wiki.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
